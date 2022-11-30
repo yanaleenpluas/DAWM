@@ -5,29 +5,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
 let cargarDatos2 = () => {
   console.log('DOM cargado y analizado');
 
-  let url = 'https://oslogin.googleapis.com/$discovery/rest?version=v1'
+  let url = 'https://dog.ceo/api/breeds/list/all'
 }
 
 let cargarDatos = () => {
       console.log('DOM cargado y analizado');
 
-      let url = 'https://dataserverdawm.herokuapp.com/escritores/xml'
+      let url = 'https://dog.ceo/api/breeds/list/all'
       fetch(url)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
           const parser = new DOMParser();
-          const xml = parser.parseFromString(data, "application/xml");
+          const json = parser.parseFromString(data, "application/xml");
           // Procesamiento de la constante xml
 
           let select = document.getElementsByClassName('custom-select')[0]
-          let escritores = xml.getElementsByTagName('escritor')
+          let city = json.getElementsByTagName('message')
 
 
-          Array.from(escritores).forEach(function (element) {
+          Array.from(city).forEach(function (element) {
             let option = document.createElement("option")
 
-            option.innerHTML = element.getElementsByTagName("nombre")[0].innerHTML
-            option.setAttribute("value", element.getElementsByTagName("id")[0].innerHTML )
+            option.innerHTML = element.getElementsByTagName("message")[0].innerHTML
+            option.setAttribute("message", element.getElementsByTagName("id")[0].innerHTML )
 
             select.appendChild(option)
 
