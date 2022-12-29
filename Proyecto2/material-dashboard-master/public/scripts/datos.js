@@ -15,23 +15,17 @@ let cargarDatos = () => {
       fetch(url)
         .then(response => response.json())
         .then(data => {
-          const parser = new DOMParser();
-          const json = parser.parseFromString(data, "application/xml");
-          // Procesamiento de la constante xml
+          let data = obj[0]
+          let phonetic = Object.values(data.phonetics) 
+          let newPhonetic = Object.values(phonetic[1])
+          let source = Object.values(newPhonetic)[2]
+          let audio = Object.values(newPhonetic)[1]
+          let text = Object.values(newPhonetic)[0]
 
-          let select = document.getElementsByClassName('custom-select')[0]
-          let city = json.getElementsByTagName('message')
-
-
-          Array.from(city).forEach(function (element) {
-            let option = document.createElement("option")
-
-            option.innerHTML = element.getElementsByTagName("message")[0].innerHTML
-            option.setAttribute("message", element.getElementsByTagName("id")[0].innerHTML )
-
-            select.appendChild(option)
-
-          });
+          let meaning = Object.values(data.meanings) 
+          let newMeaning = Object.values(meaning[0])
+          let synonyms = Object.values(newMeaning)[2]
+          let antonyms = Object.values(newMeaning)[3]
 
         })
         .catch(console.error);
