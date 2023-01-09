@@ -1,0 +1,40 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Charm&family=Qwigley&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+  
+</style>
+<div class="album py-5 bg-light"
+class="p-5 text-center bg-image"
+      style="
+      background-color: rgba(0,0,0,0.8);
+        background-image: url('https://i.pinimg.com/originals/4c/1a/94/4c1a945d21f20393bcac73f113943b77.jpg');
+ 
+      ">
+  <div class="container">
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <h1 class="mask" >Books</h1>
+  <div class="col" *ngFor="let book of books">
+    <div class="card shadow-sm">
+      <img src="https://areajugones.sport.es/wp-content/uploads/2022/06/harry-potter-y-la-piedra-filosofal.jpeg" alt="{{book.id}}">
+      <div class="card-body">
+        <h2 class="card-text">{{book.libro}}</h2>
+        <ul class="d-grid gap-2 my-5 list-unstyled ">          
+          <li class="d-flex gap-4 justify-content-center h-100">
+            <strong >Autora: </strong>
+            <div class ="texto">{{book.autora}}</div>
+          </li>
+          <li class="d-flex gap-4 justify-content-center  h-100" >
+            <strong >Fecha de Lanzamiento: </strong>
+            <div class="texto">{{book.fecha_de_lanzamiento}}</div>
+          </li>
+            <strong>Descripcion: </strong>
+            <div class="texto">{{book.descripcion}}</div>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</div>
+</div>

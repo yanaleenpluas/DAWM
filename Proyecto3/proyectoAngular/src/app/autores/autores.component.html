@@ -1,0 +1,51 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Charm&family=Qwigley&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+  
+</style>
+<div class="album py-5 bg-light"
+class="p-5 text-center bg-image"
+      style="
+      background-color: rgba(0,0,0,0.8);
+        background-image: url('https://i.pinimg.com/originals/4c/1a/94/4c1a945d21f20393bcac73f113943b77.jpg');
+ 
+      ">
+<div class="modal modal-tour position-static d-block py-5" tabindex="-1" role="dialog" id="modalTour">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-body p-5">
+        <h2 class="fw-bold mb-0 ">{{data.title}}
+        </h2>
+
+        <ul class="d-grid gap-4 my-5 list-unstyled">
+          <li class="d-flex gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/2322/2322693.png" width="48" height="48"/>
+            <div>
+              <strong>Autor:</strong>
+              <p>{{data.author}}</p>
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <img src="https://previews.123rf.com/images/djvstock/djvstock1803/djvstock180306473/97197708-icono-de-hoja-de-cuaderno-sobre-fondo-blanco-dise%C3%B1o-colorido-ilustraci%C3%B3n-vectorial.jpg" width="48" height="48"/>
+            <div>
+              <strong>Numero de Lineas</strong>
+              <p>{{data.linecount}}</p>
+
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/1478/1478941.png" width="48" height="48"/>
+            <div>
+              <strong>Fecha de Publicacion</strong>
+              <p>25 de febrero 2001</p>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+

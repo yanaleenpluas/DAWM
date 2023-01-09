@@ -1,0 +1,37 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Charm&family=Qwigley&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+  
+</style>
+<div
+class="p-5 text-center bg-image"
+      style="
+      background-color: rgba(0,0,0,0.8);
+        background-image: url('https://i.pinimg.com/originals/4c/1a/94/4c1a945d21f20393bcac73f113943b77.jpg');
+ 
+      "
+    >
+    <!--Section: Content-->
+    <section class="text-center">
+      <h1 class="mask" >Books</h1>
+
+      <div class="row" >
+        <div class="col-lg-4 col-md-12 mb-4" *ngFor="let poemas of obtenerDatos">
+          <div class="card" >
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" >
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              
+            </div>
+            <div class="card-body">
+              <strong class="card-title">{{poemas.title}}</strong>
+              <p class="card-text">{{poemas.lines}}</p>
+              <a class="btn btn-primary" routerLink="/autores/{{poemas.title}}">Learn More</a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!--Section: Content-->
+  </div>
