@@ -1,29 +1,21 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-  <div class="position-sticky pt-3 sidebar-sticky">
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/">
-          <span data-feather="home" class="align-text-bottom"></span>
-          Dashboard
-        </a>
+<nav class="navbar navbar-expand-lg" id="tm-main-nav">
+  <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" 
+      data-toggle="collapse" data-target="#navbar-nav" 
+      aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+  </button>
+<div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+  <ul class="navbar-nav text-uppercase">
+      <li class="nav-item active">
+          <a class="nav-link tm-nav-link" href="/">Dashboard <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/customer">
-          <span data-feather="users" class="align-text-bottom"></span>
-          Customers
-        </a>
+          <a class="nav-link tm-nav-link" href="/customer">Customers</a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link" href="/productosALL">
-          <span data-feather="shopping-cart" class="align-text-bottom"></span>
-          Products
-        </a>
-      </li>
+          <a class="nav-link tm-nav-link" href="/productosALL">Products</a>
+      </li>                            
       
-
-    </ul>
-
-
-  </div>
+  </ul>                            
+</div>
 </nav>
