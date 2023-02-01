@@ -1,0 +1,43 @@
+<main class="col-md-8 ms-sm-auto col-lg-10 px-md-4">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>Customer Number : <%= id%> - Orders </h2>
+                    </div>
+                    
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Product Name</th>
+                        <th>Buy Price</th>
+                        <th>Order Date</th>
+                        <th>Price Each</th>
+                        <th>Quantity Ordered</th>
+                        <th>Status</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>  
+                    <% arrOrder.forEach((order, idx) => { %>  
+                      <tr> 
+                        <td><%= order.orderNumber %></td>  
+                        <td><%= order.productName %></td>  
+                        <td><%= order.buyPrice %></td>  
+                        <td><%= order.orderDate %></td>  
+                        <td><%= order.priceEach %></td>  
+                        <td><%= order.quantityOrdered %></td>   
+                        <td><%= order.status %></td>   
+
+                      </tr>  
+                      <% }); %>  
+                </tbody>  
+              </table>
+        </div>
+    </div>  
+</main>
